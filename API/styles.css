@@ -1,0 +1,22 @@
+/* Estilos personalizados */
+
+.container {
+    margin-top: 50px;
+}
+
+.artist-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.artist-card h2 {
+    margin-bottom: 10px;
+}
+
+.artist-card img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
