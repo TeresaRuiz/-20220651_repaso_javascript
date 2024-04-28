@@ -52,11 +52,21 @@ function generarTarjetas() {
         description.classList.add("card__description");
         description.textContent = favorito.descripcion;
 
+        // Agregar elementos de la forma
+        const shapes = document.createElement("div");
+        shapes.classList.add("card__shapes");
+        for (let i = 0; i < 8; i++) {
+            const shape = document.createElement("span");
+            shape.classList.add("card__shape");
+            shapes.appendChild(shape);
+        }
+
         cardInfo.appendChild(img);
         cardInfo.appendChild(title);
         cardInfo.appendChild(description);
 
         article.appendChild(cardInfo);
+        article.appendChild(shapes); // Agregar las formas a la tarjeta
 
         // Agregar tarjeta al contenedor
         cardData.appendChild(article);
