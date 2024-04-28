@@ -1,22 +1,80 @@
-/* Estilos personalizados */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
 
+body {
+    background: url(https://i.pinimg.com/564x/39/75/0b/39750b209d434241c62cc3ede7d36e83.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+}
+
+/* Estilo para el contenedor principal */
 .container {
-    margin-top: 50px;
-}
-
-.artist-card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
+    margin: 50px auto; /* Centra el contenedor en la página */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Añade un borde sólido */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo semi-transparente */
+    max-width: 800px; /* Limita el ancho máximo del contenedor */
 }
 
-.artist-card h2 {
-    margin-bottom: 10px;
+h1 {
+    text-align: center;
 }
 
-.artist-card img {
-    max-width: 100%;
-    margin-bottom: 10px;
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo para el formulario de búsqueda */
+#search-form {
+    text-align: center;
+}
+
+#artist-input {
+    width: 100%;
+}
+
+/* Media queries para pantallas más pequeñas */
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    #artist-input {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin: 10px auto;
+        padding: 5px;
+    }
+}
+
+/* Media queries para pantallas más pequeñas */
+
+@media (max-width: 768px) {
+    .center-image {
+        text-align: center;
+    }
+
+    .center-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+

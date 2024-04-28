@@ -32,12 +32,18 @@ async function mostrarInfoArtista(nombreArtista) {
     try {
         const infoArtista = await obtenerInfoArtista(nombreArtista);
 
+        // Verificar si hay imagen disponible
+        let imagenURL = '';
+        if (infoArtista && infoArtista.image && infoArtista.image[2] && infoArtista.image[2]['#text']) {
+            imagenURL = infoArtista.image[2]['#text'];
+        }
+
         // Crear elementos HTML para mostrar la información
         const div = document.createElement('div');
         div.classList.add('col-md-6', 'mx-auto', 'text-center', 'artist-card');
         const contenido = `
             <h2>${infoArtista.name}</h2>
-            <img src="${infoArtista.image[2]['#text']}" alt="${infoArtista.name}">
+            <img src="${imagenURL}" alt="${infoArtista.name}">
             <p>${infoArtista.bio.summary}</p>
             <a href="${infoArtista.url}" target="_blank" class="btn btn-primary">Ver más</a>
         `;
@@ -52,6 +58,6 @@ async function mostrarInfoArtista(nombreArtista) {
 
 // Llamar a la función para mostrar la información del artista al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    const nombreArtista = 'Metallica'; // Puedes cambiar el nombre del artista aquí
+    const nombreArtista = 'Maluma'; // Puedes cambiar el nombre del artista aquí
     mostrarInfoArtista(nombreArtista);
 });
